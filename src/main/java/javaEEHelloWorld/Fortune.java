@@ -23,8 +23,8 @@ public class Fortune {
     private String name;
     private String color;
     private String food;
-    private String result="";
-    private String msg="";
+    private String result = "";
+    private String msg = "";
 
 
     public String getMsg() {
@@ -42,15 +42,6 @@ public class Fortune {
 
     public void setResult(String result) {
         this.result = result;
-    }
-
-
-    public String[] getFortunes() {
-        return fortunes;
-    }
-
-    public void setFortunes(String[] fortunes) {
-        this.fortunes = fortunes;
     }
 
     public String getName() {
@@ -78,28 +69,26 @@ public class Fortune {
         this.food = food;
     }
 
-    public void tellFortune(){
-        int tmpname = name.length();
-        int tmpcolor = color.length();
-        int tmpfood = food.length();
-        int tmp = tmpname + tmpcolor + tmpfood;
+    public void tellFortune() {
+        int tmpName = name.length();
+        int tmpColor = color.length();
+        int tmpFood = food.length();
+        int tmp = tmpName + tmpColor + tmpFood;
         tmp = tmp % fortunes.length;
         setResult((fortunes[tmp]));
         check();
     }
 
-    public void check(){
-        if(name.equals("")) {
+    public void check() {
+        if (name.equals("")) {
             msg = "no name selected";
             setResult(msg);
-        }
-            else if (color.equals("")) {
+        } else if (color.equals("")) {
             msg = "no color selected";
             setResult(msg);
+        } else if (food.equals("")) {
+            msg = "no food selected";
+            setResult(msg);
         }
-                else if (food.equals("")){
-                    msg="no food selected";
-                    setResult(msg);
-                }
-            }
-        }
+    }
+}
