@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1>Hej</h1>
+<h:form>
+<h:outputLabel value="What is your name?"/><br/><br/>
+<h:inputText value="#{fortune.name}"/><br/><br/>
+<h:outputLabel value="What is your favourite color?"/><br/><br/>
+<h:inputText value="#{fortune.color}"/><br/><br/>
+<h:outputLabel value="What is your favourite food?"/><br/><br/>
+<h:inputText value="#{fortune.food}"/><br/><br/>
+<h:commandButton value="submit" action="#{fortune.tellFortune()}"/>
+<br/>
+
+<p>
+    Result: <h:outputLabel value="#{fortune.result}"/>
+</p>
+</h:form>
+
+</body>
+</html>
