@@ -41,7 +41,7 @@ pipeline{
   stage('Deploy application'){
   agent any
   steps{
-  sh 'mvn -asadmin deploy /target/javaEEHelloWorld-1.0-SNAPSHOT.war'
+  sh 'asadmin deploy /target/javaEEHelloWorld-1.0-SNAPSHOT.war'
   }
   }
   }
