@@ -30,7 +30,7 @@ pipeline{
           reportTitles: 'Test Coverage'])
       }
       success{
-      archive 'target/javaEEHelloWorld-1.0-SNAPSHOT.war'
+      archive '/target/javaEEHelloWorld-1.0-SNAPSHOT.war'
       }
 
   }
@@ -41,7 +41,7 @@ pipeline{
   stage('Deploy application'){
   agent any
   steps{
-  sh 'mvn -v'
+  sh 'mvn -asadmin deploy /target/javaEEHelloWorld-1.0-SNAPSHOT.war'
   }
   }
   }
