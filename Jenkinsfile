@@ -6,7 +6,9 @@ pipeline{
 
   stages{
   stage('Build application') {
-  agent any
+  agent {
+        docker{ image 'rasilva1986/java-maven:alm'}
+    }
   steps{
   sh 'mvn clean install'
   }
