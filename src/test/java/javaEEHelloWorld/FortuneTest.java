@@ -54,7 +54,7 @@ public class FortuneTest {
     @Test
     public void testTellFortune(){
         fortune.setName("daniel");
-        fortune.setFood("tacos");
+        fortune.setFood("Pizza");
         fortune.setColor("green");
         fortune.tellFortune();
         assertEquals(fortune.getResult(), "Say hello to others. You will have a happier day.");
