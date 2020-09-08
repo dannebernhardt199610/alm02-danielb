@@ -33,15 +33,15 @@ pipeline{
       archive 'target/javaEEHelloWorld-1.0-SNAPSHOT.war'
       }
 
-  }
+    }
 
-  }
+ }
 
 
   stage('Deploy application'){
   agent any
   steps{
-  sh 'mvn -v'
+       sh 'asadmin --port 4848 deploy --force --name FortuneTeller-${DEPLOY_ENV} --contextroot FortuneTeller-${DEPLOY_ENV} target/javaEEHelloWorld-1.0-SNAPSHOT.war'
   }
   }
   }
